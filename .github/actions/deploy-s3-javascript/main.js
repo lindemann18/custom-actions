@@ -7,10 +7,9 @@ function run() {
   const bucketRegion = core.getInput('bucket-region', { required: true });
   const distFolder = core.getInput('dist-folder', { required: true });
   console.log(bucket, bucketRegion, distFolder);
-
   // upload files
-
-
   core.notice('hello from my custom JS action!');
+  const website = 'drubia.com'
+  core.setOutput('website-url', website);
 }
 run();

@@ -70,8 +70,14 @@ jobs:
       - name: Get code
         uses: actions/checkout@v3
       - name: run custom action
+        id: deploy
         uses: ./.github/actions/deploy-s3-javascript
+        env:
+          AWS_ACCESS_KEY_ID: 'wawhahwhahwah'
         with:
           bucket: 'bucket-name'
           bucket-region: 'something'
           dist-folder: ./dist
+      - name: output information
+        run: |
+          echo "live url: ${{steps.deploy.outputs.website-url}}"
