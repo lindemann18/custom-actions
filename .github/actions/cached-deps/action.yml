@@ -9,7 +9,7 @@ inputs:
 outputs:
   used-cache:
     description: 'wether cached was used.'
-    value: ${{ steps.install }}
+    value: ${{ steps.install.outputs.cache }}
 runs:
   using: 'composite' #this tells github this is a custome action
   steps:
