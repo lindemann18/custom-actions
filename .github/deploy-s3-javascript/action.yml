@@ -3,5 +3,5 @@ description: 'deploy a stastic wwebsite via AWS s3'
 runs:
   using: 'node16'
   #pre:
-  main: 'main.js'
+  main: './main.js'
   #post:
