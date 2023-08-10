@@ -4,5 +4,4 @@ const exec = require('@actions/exec');
 function run() {
   core.notice('hello from my custom JS action!');
 }
-
 run();
